@@ -42,11 +42,12 @@ static const struct sensor_driver_api tmc2130_api_funcs = {
 int tmc2130_init(struct device *dev)
 {
 	struct tmc2130_data *data = dev->driver_data;
+	LOG_INF("tmc2130_init");
 	return 0;
 }
 
 static struct tmc2130_data tmc2130_data;
 
-DEVICE_AND_API_INIT(tmc2130, DT_INST_0_TMC2130_LABEL, tmc2130_init, &tmc2130_data,
+DEVICE_AND_API_INIT(tmc2130, "TMC2130", tmc2130_init, &tmc2130_data,
 		    NULL, POST_KERNEL, CONFIG_SENSOR_INIT_PRIORITY,
 		    &tmc2130_api_funcs);
