@@ -1,0 +1,10 @@
+# TMC2130, Stepper driver
+
+# Copyright (c) 2020 None
+# SPDX-License-Identifier: Apache-2.0
+
+config TMC2130
+	bool "TMC2130 stepper driver"
+	depends on SPI
+	help
+	  Enable driver for TMC2130 SPI-based stepper driver.

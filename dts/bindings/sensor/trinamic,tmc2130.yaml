@@ -1,0 +1,8 @@
+# Copyright (c) 2020, None
+# SPDX-License-Identifier: Apache-2.0
+
+description: TMC2130 integrated stepper driver
+
+compatible: "trinamic,tmc2130"
+
+include: spi-device.yaml
